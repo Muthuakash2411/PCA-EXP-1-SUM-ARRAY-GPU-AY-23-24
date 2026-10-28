@@ -803,3 +803,4 @@ int main(int argc, char **argv)
 
 ## RESULT:
 
+The program was executed with block sizes 256, 1023, and 1024. All three configurations produced correct results, as indicated by “Arrays match.” The execution times were 0.000947 seconds, 0.001007 seconds, and 0.000931 seconds, respectively. Among these configurations, block.x = 1024 achieved the lowest execution time, followed by block.x = 256 and block.x = 1023. The 1024-thread configuration was slightly faster due to differences in GPU scheduling and resource utilization. When each thread processes two elements, the number of threads required can be reduced, potentially improving performance. However, the actual performance depends on the kernel implementation. Therefore, block.x = 1024 was the fastest configuration in this experiment.
